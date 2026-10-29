@@ -2,21 +2,21 @@
 #
 # AML Design Token Inspector — 一键安装脚本
 #
-# 用法 A（推荐，一条命令装好）：
-#   curl -fsSL https://raw.githubusercontent.com/__OWNER__/aml-token-inspector/main/install.sh | bash
+# 用法 A（一条命令装好，SITE 换成安装页地址）：
+#   curl -fsSL <SITE>/install.sh | bash -s -- <SITE>
 #
 # 用法 B（已克隆仓库后本地执行）：
 #   git clone https://github.com/__OWNER__/aml-token-inspector.git
 #   cd aml-token-inspector && ./install.sh
 #
-# 可选环境变量：
-#   REPO_URL  覆盖仓库地址（内网镜像 / fork）
-#   BRANCH    覆盖分支名（默认 main）
+# 环境变量：
+#   SITE        安装页/静态站点地址（用法 A 时作为第一个参数传入即可）
+#   REPO_URL    覆盖 Git 仓库地址（内网镜像 / fork）
 #
 set -euo pipefail
 
+SITE="${1:-${SITE:-}}"
 REPO_URL="${REPO_URL:-https://github.com/__OWNER__/aml-token-inspector.git}"
-BRANCH="${BRANCH:-main}"
 
 # 1) 判断装到哪个客户端的 skills 目录
 case "${__CFBundleIdentifier:-}" in
@@ -24,25 +24,47 @@ case "${__CFBundleIdentifier:-}" in
   *)           SKILLS_DIR="$HOME/.workbuddy/skills" ;;
 esac
 
-# 2) 定位仓库根目录（curl 管道执行时本地没有仓库 → 自动克隆）
+TMP=""
+cleanup() { [ -n "$TMP" ] && [ -d "$TMP" ] && rm -rf "$TMP"; }
+trap cleanup EXIT
+
+# 2) 定位 skill 源目录（本地仓库 → 站点 zip → git clone）
 SRC=""
-if [ -n "${BASH_SOURCE[0]:-}" ]; then
+if [ -n "${BASH_SOURCE[0]:-}" ] && [ -f "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/install.sh" ]; then
   SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 fi
-if [ -z "$SRC" ] || [ ! -f "$SRC/install.sh" ]; then
-  echo "→ 未检测到本地仓库，正在克隆 $REPO_URL ..."
+
+if [ -z "$SRC" ]; then
   TMP="$(mktemp -d)"
-  trap 'rm -rf "$TMP"' EXIT
-  git clone --depth 1 -b "$BRANCH" "$REPO_URL" "$TMP/repo" >/dev/null
-  SRC="$TMP/repo"
+  if [ -n "$SITE" ]; then
+    echo "→ 正在从 $SITE 下载 skill 包 ..."
+    curl -fsSL "$SITE/skills.zip" -o "$TMP/skills.zip"
+    unzip -q "$TMP/skills.zip" -d "$TMP/unzipped"
+    SRC="$TMP/unzipped"
+  else
+    echo "→ 正在克隆 $REPO_URL ..."
+    git clone --depth 1 "$REPO_URL" "$TMP/repo" >/dev/null
+    SRC="$TMP/repo"
+  fi
 fi
 
-# 3) 逐个安装：凡是含 SKILL.md 的一级目录都当作一个 skill
+# 3) 找到含 SKILL.md 的目录（兼容多一层嵌套，例如 GitHub archive 的 -main 目录）
+pick_dirs() {
+  find "$1" -maxdepth 3 -name SKILL.md -type f -exec dirname {} \; 2>/dev/null | sort -u
+}
+
+DIRS="$(pick_dirs "$SRC")"
+if [ -z "$DIRS" ]; then
+  echo "✗ 没找到任何含 SKILL.md 的 skill 目录" >&2
+  exit 1
+fi
+
+# 4) 逐个安装
 mkdir -p "$SKILLS_DIR"
 installed=0
-for d in "$SRC"/*/; do
+while IFS= read -r d; do
+  [ -n "$d" ] || continue
   name="$(basename "$d")"
-  [ -f "$d/SKILL.md" ] || continue
   if [ -d "$SKILLS_DIR/$name" ]; then
     rm -rf "$SKILLS_DIR/$name"
     echo "  ↻ 已更新 skill: $name"
@@ -51,10 +73,10 @@ for d in "$SRC"/*/; do
   fi
   cp -R "$d" "$SKILLS_DIR/$name"
   installed=$((installed + 1))
-done
+done <<< "$DIRS"
 
 if [ "$installed" -eq 0 ]; then
-  echo "✗ 仓库里没找到任何含 SKILL.md 的 skill 目录" >&2
+  echo "✗ 没有安装任何 skill" >&2
   exit 1
 fi
 

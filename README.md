@@ -10,23 +10,54 @@
 
 ---
 
-## 一键安装
+## 给别人装：三选一
+
+### 方式一 · 局域网链接分享（无需任何外部账号，最快）
+
+在本机执行：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/__OWNER__/aml-token-inspector/main/install.sh | bash
+./share.sh
 ```
 
-或先克隆再本地执行：
+它会生成 `dist/` 并起一个临时静态服务，然后打印：
+
+```
+安装页：  http://192.168.x.x:8765
+
+发给同事的一条命令安装：
+  curl -fsSL http://192.168.x.x:8765/install.sh | bash -s -- http://192.168.x.x:8765
+```
+
+同一 WiFi / 内网下的同事，打开链接看说明，或在终端粘贴那条命令即可装好。Ctrl+C 停止。
+
+### 方式二 · 手动安装（发个压缩包就行）
 
 ```bash
-git clone https://github.com/__OWNER__/aml-token-inspector.git
+./make_dist.sh     # 生成 dist/skills.zip
+```
+
+把 `dist/skills.zip` 发给同事，解压后把 `aml-token-inspector` 与 `规范样式` 两个文件夹复制到
+`~/.workbuddy/skills/`（访达 Shift+Cmd+G 输入路径跳转），重启会话生效。
+
+### 方式三 · Git 仓库（需要先推送到远程）
+
+```bash
+git clone <仓库地址>
 cd aml-token-inspector && ./install.sh
+```
+
+把仓库推到 GitHub / GitLab / 内网 Git 后，把上面两行发给同事即可；
+推到 GitHub 后可进一步简化为：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/<owner>/aml-token-inspector/main/install.sh | bash
 ```
 
 脚本会自动：
 
 1. 识别当前客户端（WorkBuddy → `~/.workbuddy/skills/`，CodeBuddy → `~/.codebuddy/skills/`）
-2. 把仓库里所有含 `SKILL.md` 的一级目录复制过去（已存在则覆盖更新）
+2. 找到所有含 `SKILL.md` 的目录复制过去（已存在则覆盖更新）
 
 装完后重启会话（或刷新技能列表）即可生效。
 
@@ -40,7 +71,10 @@ cd aml-token-inspector && ./install.sh
 
 ```
 aml-token-inspector/
-├── install.sh                    一键安装脚本
+├── install.sh                    一键安装脚本（支持站点 zip / 本地仓库 / git clone）
+├── make_dist.sh                  生成可分享的 dist/（含 skills.zip 与安装页）
+├── share.sh                      局域网临时共享，打印可转发的安装命令
+├── site/index.html               安装页模板（按访问地址动态生成命令）
 ├── aml-token-inspector/          skill 本体（自检页）
 │   ├── SKILL.md                  skill 说明（AI 读这份）
 │   ├── index.html                产物：单文件自检页 ← 直接双击打开这个
