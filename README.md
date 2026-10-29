@@ -43,7 +43,7 @@
 ### 方式三 · Git 仓库（需要先推送到远程）
 
 ```bash
-git clone <仓库地址>
+git clone https://github.com/huangxudong1124-rgb/aml-token-inspector.git
 cd aml-token-inspector && ./install.sh
 ```
 
@@ -51,7 +51,7 @@ cd aml-token-inspector && ./install.sh
 推到 GitHub 后可进一步简化为：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<owner>/aml-token-inspector/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/huangxudong1124-rgb/aml-token-inspector/main/install.sh | bash
 ```
 
 脚本会自动：
