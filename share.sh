@@ -5,7 +5,6 @@
 #
 #   ./share.sh            # 默认 8765 端口
 #   PORT=9000 ./share.sh  # 换端口
-#   ./share.sh --public   # 顺便用 cloudstudio 部署一个公网链接（需客户端支持）
 #
 set -euo pipefail
 
@@ -14,6 +13,11 @@ PORT="${PORT:-8765}"
 PY="$(command -v python3 || echo /usr/bin/python3)"
 
 "$ROOT/make_dist.sh"
+
+# 端口被占用就自动顺延到下一个空闲端口
+while lsof -nP -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; do
+  PORT=$((PORT + 1))
+done
 
 # 取内网 IP
 IP=""
