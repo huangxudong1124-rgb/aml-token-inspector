@@ -17,6 +17,7 @@ set -euo pipefail
 
 SITE="${1:-${SITE:-}}"
 REPO_URL="${REPO_URL:-https://github.com/huangxudong1124-rgb/aml-token-inspector.git}"
+ZIP_URL="${ZIP_URL:-https://codeload.github.com/huangxudong1124-rgb/aml-token-inspector/zip/refs/heads/main}"
 
 # 1) 判断装到哪个客户端的 skills 目录
 case "${__CFBundleIdentifier:-}" in
@@ -42,9 +43,34 @@ if [ -z "$SRC" ]; then
     unzip -q "$TMP/skills.zip" -d "$TMP/unzipped"
     SRC="$TMP/unzipped"
   else
-    echo "→ 正在克隆 $REPO_URL ..."
-    git clone --depth 1 "$REPO_URL" "$TMP/repo" >/dev/null
-    SRC="$TMP/repo"
+    # 优先直接下载仓库压缩包（比 git clone 更容易穿透网络限制）
+    echo "→ 正在下载仓库压缩包 ..."
+    got=""
+    # 第一次：按当前环境（可能走代理）；第二次：强制直连，绕开代理
+    for mode in default direct; do
+      rm -f "$TMP/repo.zip"
+      rm -rf "$TMP/unzipped"
+      if [ "$mode" = direct ]; then
+        curl -fsSL --noproxy '*' --max-time 90 "$ZIP_URL" -o "$TMP/repo.zip" 2>/dev/null || continue
+      else
+        curl -fsSL --max-time 20 "$ZIP_URL" -o "$TMP/repo.zip" 2>/dev/null || continue
+      fi
+      # 用 python3 解压：GitHub 压缩包里的中文目录名，系统自带 unzip 会解成乱码
+      if command -v python3 >/dev/null 2>&1; then
+        python3 -c 'import sys,zipfile; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])' \
+          "$TMP/repo.zip" "$TMP/unzipped" 2>/dev/null && { got=1; break; }
+      fi
+      unzip -q "$TMP/repo.zip" -d "$TMP/unzipped" 2>/dev/null && { got=1; break; }
+    done
+
+    if [ -n "$got" ]; then
+      SRC="$TMP/unzipped"
+    else
+      echo "→ 压缩包下载失败，改用 git clone ..."
+      git clone --depth 1 "$REPO_URL" "$TMP/repo" >/dev/null 2>&1 \
+        || git -c http.proxy= -c https.proxy= clone --depth 1 "$REPO_URL" "$TMP/repo" >/dev/null
+      SRC="$TMP/repo"
+    fi
   fi
 fi
 
