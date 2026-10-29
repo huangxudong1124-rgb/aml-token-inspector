@@ -54,7 +54,7 @@ curl -fsSL https://raw.githubusercontent.com/huangxudong1124-rgb/aml-token-inspe
 
 ```bash
 git clone https://github.com/huangxudong1124-rgb/aml-token-inspector.git
-cd aml-token-inspector && ./install.sh
+cd aml-token-inspector && bash install.sh
 ```
 
 把仓库推到 GitHub / GitLab / 内网 Git 后，把上面两行发给同事即可；
