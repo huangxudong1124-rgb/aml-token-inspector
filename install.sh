@@ -6,7 +6,7 @@
 #   curl -fsSL <SITE>/install.sh | bash -s -- <SITE>
 #
 # 用法 B（已克隆仓库后本地执行）：
-#   git clone https://github.com/__OWNER__/aml-token-inspector.git
+#   git clone https://github.com/huangxudong1124-rgb/aml-token-inspector.git
 #   cd aml-token-inspector && ./install.sh
 #
 # 环境变量：
@@ -16,7 +16,7 @@
 set -euo pipefail
 
 SITE="${1:-${SITE:-}}"
-REPO_URL="${REPO_URL:-https://github.com/__OWNER__/aml-token-inspector.git}"
+REPO_URL="${REPO_URL:-https://github.com/huangxudong1124-rgb/aml-token-inspector.git}"
 
 # 1) 判断装到哪个客户端的 skills 目录
 case "${__CFBundleIdentifier:-}" in
