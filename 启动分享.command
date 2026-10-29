@@ -1,14 +1,30 @@
-#!/usr/bin/env bash
-cd /Users/happy/Desktop/aml-token-inspector || exit 1
+#!/bin/bash
+cd "$(dirname "$0")"
 PY=/Users/happy/.workbuddy/binaries/python/versions/3.13.12/bin/python3
+REPO=/Users/happy/Desktop/aml-token-inspector
 
-echo "1/2 启动本地分享服务…"
-"$PY" serve_daemon.py
+cd "$REPO" || exit 1
+
+echo "正在启动分享服务，请稍等几秒 ..."
+"$PY" keep_alive.py --once
+
+# 后台常驻守护：服务或链接断了会自动重连，并更新桌面上的地址
+pgrep -f "keep_alive.py" >/dev/null 2>&1 || \
+  nohup "$PY" keep_alive.py > /tmp/aml_keepalive.out 2>&1 &
+
+sleep 2
+URL=$(grep -o "https://[^ ]*" "$HOME/Desktop/发给同事.txt" | head -1)
+
 echo ""
-echo "2/2 建立公网隧道（需要几秒）…"
+echo "=========================================="
 echo ""
-"$PY" tunnel_daemon.py
+echo "  发给同事的链接："
 echo ""
-echo "把上面的链接发给同事即可（任何网络都能打开）。"
+echo "     $URL"
 echo ""
-read -r -p "按回车键关闭本窗口…"
+echo "=========================================="
+echo ""
+echo "桌面上的「发给同事.txt」已经写好，双击就能整段复制。"
+echo "这个窗口可以关掉，服务会在后台一直跑。"
+echo ""
+read -n 1 -s -r -p "按任意键关闭 ..."
