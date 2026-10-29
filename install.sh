@@ -18,6 +18,9 @@ set -euo pipefail
 SITE="${1:-${SITE:-}}"
 REPO_URL="${REPO_URL:-https://github.com/huangxudong1124-rgb/aml-token-inspector.git}"
 ZIP_URL="${ZIP_URL:-https://codeload.github.com/huangxudong1124-rgb/aml-token-inspector/zip/refs/heads/main}"
+# 现成的 skill 包（仓库里已提交），走 CDN 下载国内通常 1-3 秒，比拉整个仓库快得多
+CDN_URL="${CDN_URL:-https://cdn.jsdelivr.net/gh/huangxudong1124-rgb/aml-token-inspector@main/skills.zip}"
+CDN_URL_ALT="${CDN_URL_ALT:-https://fastly.jsdelivr.net/gh/huangxudong1124-rgb/aml-token-inspector@main/skills.zip}"
 
 # 1) 判断装到哪个客户端的 skills 目录
 case "${__CFBundleIdentifier:-}" in
@@ -43,9 +46,21 @@ if [ -z "$SRC" ]; then
     unzip -q "$TMP/skills.zip" -d "$TMP/unzipped"
     SRC="$TMP/unzipped"
   else
-    # 优先直接下载仓库压缩包（比 git clone 更容易穿透网络限制）
-    echo "→ 正在下载仓库压缩包 ..."
     got=""
+    # 1) 优先走 CDN 上的现成 skill 包（国内最快）
+    for CDN in "$CDN_URL" "$CDN_URL_ALT"; do
+      rm -rf "$TMP/unzipped"
+      curl -fsSL --max-time 30 "$CDN" -o "$TMP/skills.zip" 2>/dev/null || continue
+      if command -v python3 >/dev/null 2>&1; then
+        python3 -c 'import sys,zipfile; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])' \
+          "$TMP/skills.zip" "$TMP/unzipped" 2>/dev/null && { got=1; break; }
+      fi
+      unzip -q "$TMP/skills.zip" -d "$TMP/unzipped" 2>/dev/null && { got=1; break; }
+    done
+
+    # 2) CDN 拿不到（缓存未刷新 / 网络受限）就拉仓库压缩包（比 git clone 更容易穿透网络限制）
+    if [ -z "$got" ]; then
+    echo "→ 正在下载仓库压缩包 ..."
     # 第一次：按当前环境（可能走代理）；第二次：强制直连，绕开代理
     for mode in default direct; do
       rm -f "$TMP/repo.zip"
@@ -62,6 +77,7 @@ if [ -z "$SRC" ]; then
       fi
       unzip -q "$TMP/repo.zip" -d "$TMP/unzipped" 2>/dev/null && { got=1; break; }
     done
+    fi
 
     if [ -n "$got" ]; then
       SRC="$TMP/unzipped"
