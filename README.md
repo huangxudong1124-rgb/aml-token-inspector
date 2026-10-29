@@ -10,6 +10,16 @@
 
 ---
 
+## 最快：一条命令装好
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/huangxudong1124-rgb/aml-token-inspector/main/install.sh | bash
+```
+
+装完重启会话（或刷新技能列表）即可生效。下面是其他装法。
+
+---
+
 ## 给别人装：三选一
 
 ### 方式一 · 局域网链接分享（无需任何外部账号，最快）
