@@ -14,10 +14,16 @@ PY="$(command -v python3 || echo /usr/bin/python3)"
 
 "$ROOT/make_dist.sh"
 
-# 端口被占用就自动顺延到下一个空闲端口
-while lsof -nP -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; do
-  PORT=$((PORT + 1))
-done
+# 端口已被占用 → 服务已在跑，直接给链接，不再另起一个（避免链接变端口）
+if lsof -nP -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; then
+  IP="$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null || echo 127.0.0.1)"
+  echo ""
+  echo "服务已经在运行了，直接发这个链接给同事："
+  echo ""
+  echo "  http://$IP:$PORT"
+  echo ""
+  exit 0
+fi
 
 # 取内网 IP
 IP=""
