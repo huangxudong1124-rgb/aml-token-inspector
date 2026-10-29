@@ -1,0 +1,166 @@
+[
+  {
+    "name": "shadow/Assembly/Button 按钮/Black 黑/Default 默认",
+    "css": "0px 0px 0px 1px rgba(11,11,15,1),0px 2px 1px 0px rgba(0,0,0,0)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Black 黑/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(74,64,91,1),0px 3px 4px 0px rgba(0,0,0,0.2)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Black 黑/Active 激活",
+    "css": "0px 0px 0px 1px rgba(11,11,15,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Black 黑/Disabled 禁用",
+    "css": "0px 0px 0px 1px rgba(162,152,188,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Gray 灰/Default 默认",
+    "css": "0px 0px 0px 1px rgba(226,226,227,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Gray 灰/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(226,226,227,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Gray 灰/Active 激活",
+    "css": "0px 0px 0px 1px rgba(11,11,15,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Gray 灰/Disabled 禁用",
+    "css": "0px 0px 0px 1px rgba(226,226,227,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Purple 紫/Default 默认",
+    "css": "0px 0px 0px 1px rgba(206,174,255,1),0px 2px 1px 0px rgba(0,0,0,0)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Purple 紫/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(101,18,173,1),0px 3px 4px 0px rgba(0,0,0,0.2)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Purple 紫/Active 激活",
+    "css": "0px 0px 0px 1px rgba(101,18,173,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Purple 紫/Disabled 禁用",
+    "css": "0px 0px 0px 1px rgba(206,174,255,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Card 卡片/Base 基础卡片",
+    "css": "0px 2px 6px 0px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Card 卡片/Hover 卡片悬浮",
+    "css": "0px 5px 15px 0px rgba(0,0,0,0.05),0px 15px 35px -2px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Icon 图标/small 小",
+    "css": "0px 1px 0px 0px rgba(0,0,0,0.08)"
+  },
+  {
+    "name": "shadow/Card 卡片/弹窗浮层/1 基础投影",
+    "css": "0px 2px 6px 0px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Card 卡片/弹窗浮层/2 dropdown & pop",
+    "css": "0px 5px 15px 0px rgba(0,0,0,0.05),0px 15px 35px -2px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Card 卡片/弹窗浮层/3 modal",
+    "css": "0px 5px 15px 0px rgba(0,0,0,0.05),0px 15px 35px 0px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Border 边框/all",
+    "css": "0px 0px 0px 1px rgba(236,236,237,1)"
+  },
+  {
+    "name": "shadow/Border 边框/top",
+    "css": "0px -1px 0px 0px rgba(236,236,237,1)"
+  },
+  {
+    "name": "shadow/Border 边框/bottom",
+    "css": "0px 1px 0px 0px rgba(236,236,237,1)"
+  },
+  {
+    "name": "shadow/Border 边框/left",
+    "css": "-1px 0px 0px 0px rgba(236,236,237,1)"
+  },
+  {
+    "name": "shadow/Border 边框/right",
+    "css": "1px 0px 0px 0px rgba(236,236,237,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Green 绿/Default 默认",
+    "css": "0px 0px 0px 1px rgba(145,222,222,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Green 绿/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(0,120,120,1),0px 3px 4px 0px rgba(0,0,0,0.2)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Green 绿/Active 激活",
+    "css": "0px 0px 0px 1px rgba(0,120,120,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Green 绿/Disabled 禁用",
+    "css": "0px 0px 0px 1px rgba(145,222,222,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Red 红/Default 默认",
+    "css": "0px 0px 0px 1px rgba(247,162,178,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Red 红/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(227,27,84,1),0px 3px 4px 0px rgba(0,0,0,0.2)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Red 红/Active 激活",
+    "css": "0px 0px 0px 1px rgba(227,27,84,1)"
+  },
+  {
+    "name": "shadow/Assembly/Button 按钮/Red 红/Disabled 禁用",
+    "css": "0px 0px 0px 1px rgba(247,162,178,1),0px 2px 1px 0px rgba(0,0,0,0.15)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Default 默认",
+    "css": "0px 0px 0px 1px rgba(226,226,227,1)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Hover-Selected 悬浮-选中",
+    "css": "0px 0px 0px 1px rgba(142,85,242,1)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Active 激活",
+    "css": "0px 0px 0px 3px rgba(101,18,173,0.3),0px 0px 0px 1px rgba(101,18,173,1)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Error 错误/Default 默认",
+    "css": "0px 0px 0px 1px rgba(247,162,178,1)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Error 错误/Hover 悬浮",
+    "css": "0px 0px 0px 1px rgba(227,27,84,1)"
+  },
+  {
+    "name": "shadow/Assembly/Data entry/Error 错误/Active 激活",
+    "css": "0px 0px 0px 3px rgba(227,27,84,0.3),0px 0px 0px 1px rgba(227,27,84,1)"
+  },
+  {
+    "name": "shadow/Assembly/slider 滑动块",
+    "css": "0px 3.812416px 6.354027px 0px rgba(0,0,0,0.15),0px 0px 1.270805px 0px rgba(0,0,0,0.1)"
+  },
+  {
+    "name": "shadow/Assembly/list 列表/bottom",
+    "css": "0px 2px 6px 0px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Assembly/list 列表/right",
+    "css": "2px 0px 6px 0px rgba(0,0,0,0.05)"
+  },
+  {
+    "name": "shadow/Assembly/list 列表/left",
+    "css": "-2px 0px 6px 0px rgba(0,0,0,0.05)"
+  }
+]

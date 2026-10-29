@@ -1,0 +1,265 @@
+{
+  "categorical": [
+    {
+      "family": "分类色 Categorical",
+      "row": "Row / red · 红",
+      "scale": {
+        "1": "#FFF5F6",
+        "2": "#FCEBED",
+        "3": "#F7A2B2",
+        "4": "#F27993",
+        "5": "#EF4A71",
+        "6": "#E31B54",
+        "7": "#C01048",
+        "8": "#A11043"
+      },
+      "regular": "#E31B54",
+      "css_prefix": "red"
+    },
+    {
+      "family": "分类色 Categorical",
+      "row": "Row / yellow · 黄",
+      "scale": {
+        "1": "#FFF7E8",
+        "2": "#FFEEDB",
+        "3": "#FFCC8C",
+        "4": "#FFBB66",
+        "5": "#FF860F",
+        "6": "#F27000",
+        "7": "#D35B00",
+        "8": "#913F00"
+      },
+      "regular": "#F27000",
+      "css_prefix": "yellow"
+    },
+    {
+      "family": "分类色 Categorical",
+      "row": "Row / green · 绿",
+      "scale": {
+        "1": "#F3FAFA",
+        "2": "#E8F7F7",
+        "3": "#91DEDE",
+        "4": "#4EC7C7",
+        "5": "#0D9292",
+        "6": "#007878",
+        "7": "#006161",
+        "8": "#004444"
+      },
+      "regular": "#007878",
+      "css_prefix": "green"
+    },
+    {
+      "family": "分类色 Categorical",
+      "row": "Row / teal · 青",
+      "scale": {
+        "1": "#F2F9FC",
+        "2": "#E3F2F8",
+        "3": "#B5DBE9",
+        "4": "#6AB2D3",
+        "5": "#2279A4",
+        "6": "#07638D",
+        "7": "#055275",
+        "8": "#043C56"
+      },
+      "regular": "#07638D",
+      "css_prefix": "teal"
+    },
+    {
+      "family": "分类色 Categorical",
+      "row": "Row / brand-purple · 品牌紫",
+      "scale": {
+        "1": "#F4F0FF",
+        "2": "#E9E0FC",
+        "3": "#CEAEFF",
+        "4": "#A179F2",
+        "5": "#8E55F2",
+        "6": "#6512AD",
+        "7": "#7B32DE",
+        "8": "#511086"
+      },
+      "regular": "#6512AD",
+      "css_prefix": "brand-purple"
+    }
+  ],
+  "functional": [
+    {
+      "family": "Success 成功",
+      "row": "Row / success · 功能色",
+      "scale": {
+        "1": "#E4F5F5",
+        "2": "#D1EFEF",
+        "3": "#91DEDE",
+        "4": "#4EC7C7",
+        "5": "#23B3B3",
+        "6": "#0D9292",
+        "7": "#007878",
+        "8": "#006161"
+      },
+      "regular": "#0D9292"
+    },
+    {
+      "family": "Warning 警告",
+      "row": "Row / warning · 功能色",
+      "scale": {
+        "1": "#FFEEDB",
+        "2": "#FFDBB1",
+        "3": "#FFBB66",
+        "4": "#FF9831",
+        "5": "#FF860F",
+        "6": "#F27000",
+        "7": "#D35B00",
+        "8": "#913F00"
+      },
+      "regular": "#F27000"
+    },
+    {
+      "family": "Danger 危险",
+      "row": "Row / danger · 功能色",
+      "scale": {
+        "1": "#FCEBED",
+        "2": "#F9D7DE",
+        "3": "#F7A2B2",
+        "4": "#F27993",
+        "5": "#F25579",
+        "6": "#E31B54",
+        "7": "#C01048",
+        "8": "#A11043"
+      },
+      "regular": "#E31B54"
+    },
+    {
+      "family": "Link 链接",
+      "row": "Row / link · 功能色",
+      "scale": {
+        "1": "#E3F2F8",
+        "2": "#CFE5F2",
+        "3": "#96D0E0",
+        "4": "#6AB2D3",
+        "5": "#4F93BB",
+        "6": "#2279A4",
+        "7": "#07638D",
+        "8": "#055275"
+      },
+      "regular": "#2279A4"
+    },
+    {
+      "family": "Info 信息",
+      "row": "Row / info · 功能色",
+      "scale": {
+        "1": "#E3F2F8",
+        "2": "#CFE5F2",
+        "3": "#96D0E0",
+        "4": "#6AB2D3",
+        "5": "#4F93BB",
+        "6": "#2279A4",
+        "7": "#07638D",
+        "8": "#055275"
+      },
+      "regular": "#4F93BB"
+    }
+  ],
+  "safety": [
+    {
+      "family": "安全色 Safety",
+      "row": "Row / danger · 危险",
+      "scale": {
+        "1": "#FFF0F2",
+        "2": "#E31B54",
+        "3": "#FF3B6A",
+        "4": "#B9092A"
+      },
+      "regular": "#E31B54",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    },
+    {
+      "family": "安全色 Safety",
+      "row": "Row / risk-3 · 风险3",
+      "scale": {
+        "1": "#FFF4E6",
+        "2": "#FF7A00",
+        "3": "#FF9500",
+        "4": "#C25700"
+      },
+      "regular": "#FF7A00",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    },
+    {
+      "family": "安全色 Safety",
+      "row": "Row / green · 安全",
+      "scale": {
+        "1": "#E6F8F5",
+        "2": "#008077",
+        "3": "#00A99D",
+        "4": "#00635B"
+      },
+      "regular": "#008077",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    },
+    {
+      "family": "安全色 Safety",
+      "row": "Row / info · 信息",
+      "scale": {
+        "1": "#F5F0FF",
+        "2": "#7B2FF7",
+        "3": "#8E5EFF",
+        "4": "#5E1D8C"
+      },
+      "regular": "#7B2FF7",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    },
+    {
+      "family": "安全色 Safety",
+      "row": "Row / unknown · 未知",
+      "scale": {
+        "1": "#F5F5FA",
+        "2": "#5E5A7E",
+        "3": "#9B9BAE",
+        "4": "#7B7B99"
+      },
+      "regular": "#5E5A7E",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    },
+    {
+      "family": "安全色 Safety",
+      "row": "Row / unknown2 · 未知2",
+      "scale": {
+        "1": "#FFFFFF",
+        "2": "#7B7B99",
+        "3": "#E6E6E6",
+        "4": "#9B9BAE"
+      },
+      "regular": "#7B7B99",
+      "roles": {
+        "1": "Tag背景色",
+        "2": "常规",
+        "3": "悬浮",
+        "4": "点击"
+      }
+    }
+  ]
+}

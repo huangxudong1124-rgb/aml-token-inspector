@@ -1,0 +1,152 @@
+﻿类别 Family,色组 Row,层级 Level,角色 Role,HEX
+分类色 Categorical,red · 红,1,浅色场景,#FFF5F6
+分类色 Categorical,red · 红,2,Tag 背景,#FCEBED
+分类色 Categorical,red · 红,3,描边,#F7A2B2
+分类色 Categorical,red · 红,4,一般禁用,#F27993
+分类色 Categorical,red · 红,5,特殊场景,#EF4A71
+分类色 Categorical,red · 红,6,常规,#E31B54
+分类色 Categorical,red · 红,7,悬浮,#C01048
+分类色 Categorical,red · 红,8,点击,#A11043
+分类色 Categorical,yellow · 黄,1,浅色场景,#FFF7E8
+分类色 Categorical,yellow · 黄,2,Tag 背景,#FFEEDB
+分类色 Categorical,yellow · 黄,3,描边,#FFCC8C
+分类色 Categorical,yellow · 黄,4,一般禁用,#FFBB66
+分类色 Categorical,yellow · 黄,5,特殊场景,#FF860F
+分类色 Categorical,yellow · 黄,6,常规,#F27000
+分类色 Categorical,yellow · 黄,7,悬浮,#D35B00
+分类色 Categorical,yellow · 黄,8,点击,#913F00
+分类色 Categorical,green · 绿,1,浅色场景,#F3FAFA
+分类色 Categorical,green · 绿,2,Tag 背景,#E8F7F7
+分类色 Categorical,green · 绿,3,描边,#91DEDE
+分类色 Categorical,green · 绿,4,一般禁用,#4EC7C7
+分类色 Categorical,green · 绿,5,特殊场景,#0D9292
+分类色 Categorical,green · 绿,6,常规,#007878
+分类色 Categorical,green · 绿,7,悬浮,#006161
+分类色 Categorical,green · 绿,8,点击,#004444
+分类色 Categorical,teal · 青,1,浅色场景,#F2F9FC
+分类色 Categorical,teal · 青,2,Tag 背景,#E3F2F8
+分类色 Categorical,teal · 青,3,描边,#B5DBE9
+分类色 Categorical,teal · 青,4,一般禁用,#6AB2D3
+分类色 Categorical,teal · 青,5,特殊场景,#2279A4
+分类色 Categorical,teal · 青,6,常规,#07638D
+分类色 Categorical,teal · 青,7,悬浮,#055275
+分类色 Categorical,teal · 青,8,点击,#043C56
+分类色 Categorical,brand-purple · 品牌紫,1,浅色场景,#F4F0FF
+分类色 Categorical,brand-purple · 品牌紫,2,Tag 背景,#E9E0FC
+分类色 Categorical,brand-purple · 品牌紫,3,描边,#CEAEFF
+分类色 Categorical,brand-purple · 品牌紫,4,一般禁用,#A179F2
+分类色 Categorical,brand-purple · 品牌紫,5,特殊场景,#8E55F2
+分类色 Categorical,brand-purple · 品牌紫,6,常规,#6512AD
+分类色 Categorical,brand-purple · 品牌紫,7,悬浮,#7B32DE
+分类色 Categorical,brand-purple · 品牌紫,8,点击,#511086
+功能色 · color,success · 成功,1,浅色场景,#F3FAFA
+功能色 · color,success · 成功,2,Tag 背景,#E8F7F7
+功能色 · color,success · 成功,3,描边,#91DEDE
+功能色 · color,success · 成功,4,一般禁用,#4EC7C7
+功能色 · color,success · 成功,5,特殊场景,#0D9292
+功能色 · color,success · 成功,6,常规,#007878
+功能色 · color,success · 成功,7,悬浮,#006161
+功能色 · color,success · 成功,8,点击,#004444
+功能色 · color,danger · 危险,1,浅色场景,#FFF5F6
+功能色 · color,danger · 危险,2,Tag 背景,#FCEBED
+功能色 · color,danger · 危险,3,描边,#F7A2B2
+功能色 · color,danger · 危险,4,一般禁用,#F27993
+功能色 · color,danger · 危险,5,特殊场景,#EF4A71
+功能色 · color,danger · 危险,6,常规,#E31B54
+功能色 · color,danger · 危险,7,悬浮,#C01048
+功能色 · color,danger · 危险,8,点击,#A11043
+功能色 · color,warning · 警告,1,浅色场景,#FFF7E8
+功能色 · color,warning · 警告,2,Tag 背景,#FFEEDB
+功能色 · color,warning · 警告,3,描边,#FFCC8C
+功能色 · color,warning · 警告,4,一般禁用,#FFBB66
+功能色 · color,warning · 警告,5,特殊场景,#FF860F
+功能色 · color,warning · 警告,6,常规,#F27000
+功能色 · color,warning · 警告,7,悬浮,#D35B00
+功能色 · color,warning · 警告,8,点击,#913F00
+功能色 · color,link · 链接,1,浅色场景,#F4F0FF
+功能色 · color,link · 链接,2,Tag 背景,#E9E0FC
+功能色 · color,link · 链接,3,描边,#CEAEFF
+功能色 · color,link · 链接,4,一般禁用,#A179F2
+功能色 · color,link · 链接,5,特殊场景,#8E55F2
+功能色 · color,link · 链接,6,常规,#6512AD
+功能色 · color,link · 链接,7,悬浮,#7B32DE
+功能色 · color,link · 链接,8,点击,#511086
+功能色 · color,grey · 灰,1,浅色场景,#FAFAFA
+功能色 · color,grey · 灰,2,Tag 背景,#F0F1F1
+功能色 · color,grey · 灰,3,描边,#E2E2E3
+功能色 · color,grey · 灰,4,一般禁用,#B1B3BB
+功能色 · color,grey · 灰,5,特殊场景,#85888E
+功能色 · color,grey · 灰,6,常规,#61646C
+功能色 · color,grey · 灰,7,悬浮,#3C3E43
+功能色 · color,grey · 灰,8,点击,#0B0B0F
+功能色 · color,purple-gray · 紫灰,1,浅色场景,#FAF9FC
+功能色 · color,purple-gray · 紫灰,2,Tag 背景,#F7F5FB
+功能色 · color,purple-gray · 紫灰,3,描边,#C9C2D7
+功能色 · color,purple-gray · 紫灰,4,一般禁用,#A298BC
+功能色 · color,purple-gray · 紫灰,5,特殊场景,#665C7A
+功能色 · color,purple-gray · 紫灰,6,常规,#0B0B0F
+功能色 · color,purple-gray · 紫灰,7,悬浮,#332847
+功能色 · color,purple-gray · 紫灰,8,点击,#4A405B
+安全色 Safety,danger · 危险,1,Tag背景色,#FFF0F2
+安全色 Safety,danger · 危险,2,常规,#E31B54
+安全色 Safety,danger · 危险,3,悬浮,#FF3B6A
+安全色 Safety,danger · 危险,4,点击,#B9092A
+安全色 Safety,risk-3 · 风险3,1,Tag背景色,#FFF4E6
+安全色 Safety,risk-3 · 风险3,2,常规,#FF7A00
+安全色 Safety,risk-3 · 风险3,3,悬浮,#FF9500
+安全色 Safety,risk-3 · 风险3,4,点击,#C25700
+安全色 Safety,green · 安全,1,Tag背景色,#E6F8F5
+安全色 Safety,green · 安全,2,常规,#008077
+安全色 Safety,green · 安全,3,悬浮,#00A99D
+安全色 Safety,green · 安全,4,点击,#00635B
+安全色 Safety,info · 信息,1,Tag背景色,#F5F0FF
+安全色 Safety,info · 信息,2,常规,#7B2FF7
+安全色 Safety,info · 信息,3,悬浮,#8E5EFF
+安全色 Safety,info · 信息,4,点击,#5E1D8C
+安全色 Safety,unknown · 未知,1,Tag背景色,#F5F5FA
+安全色 Safety,unknown · 未知,2,常规,#5E5A7E
+安全色 Safety,unknown · 未知,3,悬浮,#9B9BAE
+安全色 Safety,unknown · 未知,4,点击,#7B7B99
+安全色 Safety,unknown2 · 未知2,1,Tag背景色,#FFFFFF
+安全色 Safety,unknown2 · 未知2,2,常规,#7B7B99
+安全色 Safety,unknown2 · 未知2,3,悬浮,#E6E6E6
+安全色 Safety,unknown2 · 未知2,4,点击,#9B9BAE
+中性色 · color,color-text · 文字,1,强调正文标题,#0B0B0F
+中性色 · color,color-text · 文字,2,次强调正文标题,#3C3E43
+中性色 · color,color-text · 文字,3,次要信息,#61646C
+中性色 · color,color-text · 文字,4,置灰信息,#85888E
+中性色 · color,color-text · 文字,5,纯白文字,#FFFFFF
+中性色 · color,icon-color-fill · 图标填充,1,纯白填充,#FFFFFF
+中性色 · color,icon-color-fill · 图标填充,2,提示类填充,#B1B3BB
+中性色 · color,icon-color-fill · 图标填充,3,禁用图标填充,#85888E
+中性色 · color,icon-color-fill · 图标填充,4,默认状态,#61646C
+中性色 · color,icon-color-fill · 图标填充,5,悬浮纯白图标填充,#6200EE
+中性色 · color,icon-color-fill · 图标填充,6,纯黑填充,#0B0B0F
+中性色 · color,color-fill · 填充,1,纯白填充,#FFFFFF
+中性色 · color,color-fill · 填充,2,框类内部背景填充,#FAFAFA
+中性色 · color,color-fill · 填充,3,icon 白底悬浮背景色,#F5F5F6
+中性色 · color,color-fill · 填充,4,icon 灰底悬浮背景色,#F4F0FF
+中性色 · color,color-fill · 填充,5,tooltip 背景,#2C2E33
+中性色 · color,color-fill · 填充,6,纯黑填充,#0B0B0F
+中性色 · color,color-bg · 背景,1,白色背景色,#FFFFFF
+中性色 · color,color-bg · 背景,2,浅灰色背景,#FAFAFA
+中性色 · color,color-bg · 背景,3,浅灰色背景2,#F5F5F6
+中性色 · color,color-bg · 背景,4,嵌套场景1,#FAF9FC
+中性色 · color,color-bg · 背景,5,嵌套场景2,#FBFBFC
+中性色 · color,color-bg · 背景,6,浅灰色背景 hover,#ECECED
+中性色 · color,color-bg · 背景,7,tooltip 背景,#2C2E33
+中性色 · color,color-bg · 背景,8,黑色背景色,#0B0B0F
+中性色 · color,color-border · 描边,1,页面分割描边 (gray-200),#ECECED
+中性色 · color,color-border · 描边,2,表格描边 (gray-200),#ECECED
+中性色 · color,color-border · 描边,3,控件描边 (gray-300),#E2E2E3
+中性色 · color,color-nav · 导航,1,导航背景色,#FFFFFF
+中性色 · color,color-nav · 导航,2,导航悬停色,#F5F5F6
+中性色 · color,color-nav · 导航,3,导航选中色,#F4F0FF
+主色  Primary,主色 · Brand Purple（Pixso）,1,浅色场景,#F4F0FF
+主色  Primary,主色 · Brand Purple（Pixso）,2,Tag 背景,#E9E0FC
+主色  Primary,主色 · Brand Purple（Pixso）,3,描边,#CEAEFF
+主色  Primary,主色 · Brand Purple（Pixso）,4,一般禁用,#A179F2
+主色  Primary,主色 · Brand Purple（Pixso）,5,特殊场景,#8E55F2
+主色  Primary,主色 · Brand Purple（Pixso）,6,常规,#7B32DE
+主色  Primary,主色 · Brand Purple（Pixso）,7,悬浮,#6512AD
+主色  Primary,主色 · Brand Purple（Pixso）,8,点击,#511086
